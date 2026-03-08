@@ -9,6 +9,9 @@ MinerToggle+ lets players enable or disable quality-of-life mining and survival 
 ## Features
 
 ### Player Toggles
+
+> All toggles are **OFF by default**. Players enable only what they want with `/mt toggle <feature>`.
+
 | Feature | Command Key | Description |
 |---|---|---|
 | ⛏️ Vein Miner | `vein_miner` | Break an entire ore vein at once (sneak to activate) |
@@ -72,7 +75,23 @@ Aliases: `/mt`, `/mtp`
 
 ---
 
-## Installation
+## Auto Updater
+
+MinerToggle+ checks GitHub Releases on startup and notifies online admins when an update is available.
+
+| Config Key | Default | Description |
+|---|---|---|
+| `auto-updater.enabled` | `true` | Master on/off switch |
+| `auto-updater.github-repo` | `YourUsername/MinerTogglePlus` | Your GitHub repo (`Owner/Repo`) |
+| `auto-updater.auto-download` | `false` | Auto-download new jar to `plugins/update/` |
+| `auto-updater.notify-on-join` | `true` | Notify admins in-game on login |
+| `auto-updater.check-interval` | `60` | Minutes between re-checks (0 = startup only) |
+
+**Setup:** Set `github-repo` to your actual repo in `config.yml` before publishing. When a new release tag (e.g. `v1.1.0`) is pushed, the plugin will detect it automatically.
+
+With `auto-download: true`, the new jar is saved to `plugins/update/MinerTogglePlus.jar` — Paper will swap it in on the next restart automatically.
+
+---
 
 1. Download the latest release jar from [Releases](../../releases)
 2. Drop it into your server's `/plugins/` folder
@@ -163,7 +182,8 @@ MinerTogglePlus/
 │   │   ├── CaveVisionManager.java    # Underground Night Vision
 │   │   └── OreRadarManager.java      # Nearby ore scanner
 │   └── util/
-│       └── ItemUtils.java            # Smelt maps, drop helpers, etc.
+│       ├── ItemUtils.java            # Smelt maps, drop helpers, etc.
+│       └── UpdateChecker.java        # GitHub Releases auto-updater
 └── src/main/resources/
     ├── plugin.yml
     └── config.yml
