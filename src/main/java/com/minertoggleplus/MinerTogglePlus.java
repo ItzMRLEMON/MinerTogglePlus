@@ -3,6 +3,7 @@ package com.minertoggleplus;
 import com.minertoggleplus.commands.MinerToggleCommand;
 import com.minertoggleplus.listeners.*;
 import com.minertoggleplus.managers.*;
+import com.minertoggleplus.util.UpdateChecker;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -41,6 +42,7 @@ public class MinerTogglePlus extends JavaPlugin {
     private ClearLaggManager clearLaggManager;
     private CaveVisionManager caveVisionManager;
     private OreRadarManager oreRadarManager;
+    private UpdateChecker updateChecker;
 
     @Override
     public void onEnable() {
@@ -67,6 +69,10 @@ public class MinerTogglePlus extends JavaPlugin {
         clearLaggManager.start();
         caveVisionManager.start();
         oreRadarManager.start();
+
+        // Update checker
+        updateChecker = new UpdateChecker(this);
+        updateChecker.start();
 
         getLogger().info("MinerToggle+ v" + getDescription().getVersion() + " enabled! (" +
                 Toggle.values().length + " toggles loaded)");
@@ -98,4 +104,5 @@ public class MinerTogglePlus extends JavaPlugin {
     public ClearLaggManager getClearLaggManager() { return clearLaggManager; }
     public CaveVisionManager getCaveVisionManager() { return caveVisionManager; }
     public OreRadarManager getOreRadarManager() { return oreRadarManager; }
+    public UpdateChecker getUpdateChecker() { return updateChecker; }
 }
