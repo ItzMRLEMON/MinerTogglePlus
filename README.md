@@ -58,16 +58,16 @@ Aliases: `/mt`, `/mtp`
 
 | Permission | Default | Description |
 |---|---|---|
-| `minertoggleplus.use` | everyone | Access to all standard player toggles |
-| `minertoggleplus.toggle.vein_miner` | everyone | Use Vein Miner |
-| `minertoggleplus.toggle.tree_capitator` | everyone | Use Tree Capitator |
-| `minertoggleplus.toggle.auto_smelt` | everyone | Use Auto Smelt |
-| `minertoggleplus.toggle.auto_replant` | everyone | Use Auto Replant |
+| `minertoggleplus.use` | op | Access to all standard player toggles |
+| `minertoggleplus.toggle.vein_miner` | op | Use Vein Miner |
+| `minertoggleplus.toggle.tree_capitator` | op | Use Tree Capitator |
+| `minertoggleplus.toggle.auto_smelt` | op | Use Auto Smelt |
+| `minertoggleplus.toggle.auto_replant` | op | Use Auto Replant |
 | `minertoggleplus.toggle.silk_spawners` | op | Use Silk Spawners |
 | `minertoggleplus.toggle.double_drops` | op | Use Double Drops |
-| `minertoggleplus.toggle.auto_pickup` | everyone | Use Auto Pickup |
-| `minertoggleplus.toggle.cave_vision` | everyone | Use Cave Vision |
-| `minertoggleplus.toggle.auto_torch` | everyone | Use Auto Torch |
+| `minertoggleplus.toggle.auto_pickup` | op | Use Auto Pickup |
+| `minertoggleplus.toggle.cave_vision` | op | Use Cave Vision |
+| `minertoggleplus.toggle.auto_torch` | op | Use Auto Torch |
 | `minertoggleplus.toggle.no_fall_damage` | op | Use No Fall Damage |
 | `minertoggleplus.toggle.ore_radar` | op | Use Ore Radar |
 | `minertoggleplus.toggle.xp_boost` | op | Use XP Boost |
@@ -77,19 +77,12 @@ Aliases: `/mt`, `/mtp`
 
 ## Auto Updater
 
-MinerToggle+ checks GitHub Releases on startup and notifies online admins when an update is available.
+MinerToggle+ automatically checks [ItzMRLEMON/MinerTogglePlus](https://github.com/ItzMRLEMON/MinerTogglePlus) for new releases on startup and every 60 minutes. No configuration needed — it's always on.
 
-| Config Key | Default | Description |
-|---|---|---|
-| `auto-updater.enabled` | `true` | Master on/off switch |
-| `auto-updater.github-repo` | `YourUsername/MinerTogglePlus` | Your GitHub repo (`Owner/Repo`) |
-| `auto-updater.auto-download` | `false` | Auto-download new jar to `plugins/update/` |
-| `auto-updater.notify-on-join` | `true` | Notify admins in-game on login |
-| `auto-updater.check-interval` | `60` | Minutes between re-checks (0 = startup only) |
-
-**Setup:** Set `github-repo` to your actual repo in `config.yml` before publishing. When a new release tag (e.g. `v1.1.0`) is pushed, the plugin will detect it automatically.
-
-With `auto-download: true`, the new jar is saved to `plugins/update/MinerTogglePlus.jar` — Paper will swap it in on the next restart automatically.
+- If a newer release is found, the new `.jar` is **automatically downloaded** to `plugins/update/MinerTogglePlus.jar`
+- Paper will swap it in on the next server restart
+- Admins with `minertoggleplus.admin` receive an in-game notification on join
+- If the download fails, a fallback notice is printed to console with the release URL
 
 ---
 
