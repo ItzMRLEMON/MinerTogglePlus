@@ -101,7 +101,7 @@ MinerToggle+ automatically checks [ItzMRLEMON/MinerTogglePlus](https://github.co
 ## Building from Source
 
 ```bash
-git clone https://github.com/YourUsername/MinerTogglePlus.git
+git clone https://github.com/ItzR_L3MON/MinerTogglePlus.git
 cd MinerTogglePlus
 mvn clean package
 ```
