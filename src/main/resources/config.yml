@@ -1,18 +1,3 @@
-# Auto Updater
-auto-updater:
-  # Master switch — set to false to disable all update checking
-  enabled: true
-  # Your GitHub repo in "Owner/RepoName" format
-  # IMPORTANT: Change this to your actual repo before publishing
-  github-repo: "YourUsername/MinerTogglePlus"
-  # Automatically download the new jar to plugins/update/ on startup
-  # Server must be restarted to apply. Set false to only notify.
-  auto-download: false
-  # Notify admins (minertoggleplus.admin) in-game when they join
-  notify-on-join: true
-  # How often to re-check for updates in minutes (0 = startup only)
-  check-interval: 60
-
 # ============================
 #      MinerToggle+ Config
 # ============================
