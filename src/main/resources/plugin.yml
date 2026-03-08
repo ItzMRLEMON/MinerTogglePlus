@@ -1,0 +1,57 @@
+name: MinerTogglePlus
+version: '${project.version}'
+main: com.minertoggleplus.MinerTogglePlus
+api-version: '1.21'
+description: Feature-rich toggle utility plugin for miners
+authors: [ ]
+prefix: MinerToggle+
+
+commands:
+  minertoggle:
+    description: Main MinerToggle+ command
+    usage: /mt <toggle|status|admin|help>
+    aliases: [ mt, mtp ]
+
+permissions:
+  minertoggleplus.use:
+    description: Access to all player toggles
+    default: true
+  minertoggleplus.toggle.vein_miner:
+    description: Use Vein Miner
+    default: true
+  minertoggleplus.toggle.tree_capitator:
+    description: Use Tree Capitator
+    default: true
+  minertoggleplus.toggle.auto_smelt:
+    description: Use Auto Smelt
+    default: true
+  minertoggleplus.toggle.auto_replant:
+    description: Use Auto Replant
+    default: true
+  minertoggleplus.toggle.silk_spawners:
+    description: Use Silk Spawners
+    default: op
+  minertoggleplus.toggle.double_drops:
+    description: Use Double Drops
+    default: op
+  minertoggleplus.toggle.auto_pickup:
+    description: Use Auto Pickup
+    default: true
+  minertoggleplus.toggle.cave_vision:
+    description: Use Cave Vision
+    default: true
+  minertoggleplus.toggle.auto_torch:
+    description: Use Auto Torch
+    default: true
+  minertoggleplus.toggle.no_fall_damage:
+    description: Use No Fall Damage
+    default: op
+  minertoggleplus.toggle.ore_radar:
+    description: Use Ore Radar (nearby ore notifications)
+    default: op
+  minertoggleplus.toggle.xp_boost:
+    description: Use XP Boost on ore mining
+    default: op
+  minertoggleplus.admin:
+    description: Access to admin toggles (ClearLagg, mob drops, etc.)
+    default: op

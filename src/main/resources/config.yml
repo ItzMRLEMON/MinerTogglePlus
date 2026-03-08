@@ -1,0 +1,104 @@
+# ============================
+#      MinerToggle+ Config
+# ============================
+
+# ClearLagg global system
+clearlagg:
+  enabled: true
+  # Seconds between each clear cycle
+  interval: 300
+  # Worlds to clear (empty = all worlds)
+  worlds: []
+  # Warning times (in seconds before clear)
+  warnings: [ 60, 30, 10, 5, 3, 2, 1 ]
+  # Remove dropped items
+  clear-items: true
+  # Remove hostile mobs
+  clear-hostiles: true
+  # Remove passive mobs (animals)
+  clear-passives: false
+  # Keep named entities (name tags)
+  keep-named: true
+
+# Global mob drops toggle (admin)
+mob-drops:
+  enabled: true
+
+# Global leaf decay toggle
+leaf-decay:
+  enabled: true
+
+# VeinMiner settings
+vein-miner:
+  # Require player to sneak to activate vein miner
+  require-sneak: true
+  # Max blocks to break in one vein
+  max-blocks: 64
+  # Damage tool per block broken
+  damage-tool: true
+
+# Tree Capitator settings
+tree-capitator:
+  # Max logs to chop
+  max-logs: 200
+  # Require player to sneak
+  require-sneak: false
+  # Also break leaves when tree is chopped
+  break-leaves: true
+  # Damage tool per log broken
+  damage-tool: true
+
+# Auto Smelt settings
+auto-smelt:
+  # Give XP equivalent to furnace smelting
+  give-smelt-xp: true
+
+# Double Drops settings
+double-drops:
+  # Chance (0.0 - 1.0) to double drops
+  chance: 0.5
+
+# Cave Vision settings
+cave-vision:
+  # Y level considered "underground"
+  underground-y: 64
+  # Only apply in overworld
+  overworld-only: true
+
+# Auto Torch settings
+auto-torch:
+  # Minimum light level to trigger torch placement
+  min-light-level: 7
+
+# Ore Radar settings
+ore-radar:
+  # Radius to scan for ores (blocks)
+  radius: 16
+  # How often to scan (ticks, 20 = 1 second)
+  scan-interval: 100
+  # Ores to detect
+  detect-ores:
+    - DIAMOND_ORE
+    - DEEPSLATE_DIAMOND_ORE
+    - EMERALD_ORE
+    - DEEPSLATE_EMERALD_ORE
+    - ANCIENT_DEBRIS
+
+# XP Boost settings
+xp-boost:
+  # Extra XP multiplier (1.5 = 50% more xp)
+  multiplier: 1.5
+
+# Messages (supports & color codes)
+messages:
+  prefix: "&8[&6MinerToggle+&8] &r"
+  toggle-on: "&a%feature% &7has been &aenabled&7."
+  toggle-off: "&c%feature% &7has been &cdisabled&7."
+  no-permission: "&cYou don't have permission to use this toggle."
+  admin-toggle-on: "&a[GLOBAL] %feature% &7enabled by &a%player%&7."
+  admin-toggle-off: "&c[GLOBAL] %feature% &7disabled by &c%player%&7."
+  clearlagg-warning: "&e&lWARNING: &eClearing entities in &c%time% &esecond(s)!"
+  clearlagg-cleared: "&aCleared &e%items% &aitems and &e%entities% &aentities."
+  inventory-full: "&cInventory full! Items dropped at your feet."
+  vein-miner-hint: "&7Tip: &eSneak while mining to activate Vein Miner."
+  ore-radar-found: "&6[Radar] &eFound &6%count% &e%ore%&e nearby!"
